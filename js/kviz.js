@@ -38,16 +38,35 @@ const pitanja = [
     const rezultatElement = document.getElementById("rezultatTekst");
     const rezultat = document.getElementById("rezultat");
     const dugmePocetak = document.getElementById("pocetak");
+    const tajmer = document.getElementById("tajmer");
     dugmeDalje.style.display = "none";
     rezultat.style.display = "none"; // Sakrij rezultat
+
+    let vreme = 10;
+    let interval;
+
     function prikaziPitanje() {
-        
+    clearInterval(interval); // Očisti prethodni interval
+    vreme = 10; // Resetuj vreme
+    tajmer.innerHTML = `Preostalo vreme: ${vreme} sekundi`;
+    interval = setInterval(() => {
+        vreme--;
+        tajmer.innerHTML = `Preostalo vreme: ${vreme} sekundi`;
+        if (vreme <= 0) {
+            clearInterval(interval);
+            dugmeDalje.style.display = "block"; // Prikaži dugme "Dalje"
+            pitanjeElement.innerHTML = "Vreme je isteklo! Tačan odgovor je: " + pitanja[indeksPitanja].odgovori[pitanja[indeksPitanja].tacanOdgovor];
+            odgovoriElement.innerHTML = "";
+
+        }
+    }, 1000); // Ažuriraj tajmer svake sekunde
     pitanjeElement.innerHTML = pitanja[indeksPitanja].tekst;
     pitanja[indeksPitanja].odgovori.forEach((odgovor) => {
           const dugme = document.createElement("button");
           dugme.innerHTML = odgovor;
 
           dugme.addEventListener("click", () => {
+            clearInterval(interval); // Zaustavi tajmer kada je odgovor izabran
             if(odgovor == pitanja[indeksPitanja].odgovori[pitanja[indeksPitanja].tacanOdgovor]) {
                 poeni++;
                 dugme.style.backgroundColor = "green";
@@ -76,6 +95,7 @@ const pitanja = [
             odgovoriElement.innerHTML = "";
             rezultatElement.innerHTML = `Osvojili ste ${poeni} poena!`;
             dugmeDalje.style.display = "none"; // Sakrij dugme "Dalje"
+            tajmer.innerHTML = ""; // Očisti tajmer
           }
         });
 
