@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(to right, #fbabab, #d9d9d9);
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    padding: 20px;
+    margin: 20px auto;
+}
+#pocetna{
+        width: 80%;
+    padding: 10px;
+    margin: 10px auto;
+    align-items: center;
+    text-align: center;
+}
+ul{
+    list-style: none;
+    padding: 10px;
+    margin: 10px auto;
+}
+li{
+    margin: 30px auto;
+    
+}
+a{
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+    font-weight: bold;
+}
