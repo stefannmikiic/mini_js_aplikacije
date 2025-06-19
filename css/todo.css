@@ -96,3 +96,58 @@ a{
     display: flex;
     justify-content:left;    
 }
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 22px;
+        margin: 15px 0;
+    }
+
+    .taskForma {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .taskForma input[type="text"],
+    .taskForma input[type="date"],
+    .taskForma input[type="submit"] {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        font-size: 16px;
+        padding: 12px;
+        margin-bottom: 5px;
+    }
+
+    .taskForma input[type="submit"] {
+        margin-left: 0;
+    }
+
+    .kanban_board {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+
+    .kolona h2 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .task {
+        padding: 15px;
+        margin: 10px auto;
+        font-size: 15px;
+    }
+
+    #pocetna {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    a {
+        font-size: 16px;
+        padding: 8px;
+    }
+}

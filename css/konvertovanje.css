@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(to right, #fbabab, #d9d9d9);
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+button{
+    padding: 10px;
+    margin: 4px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    background-color: #222;
+    color: white;
+    
+}
+button:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: #cacaca;
+    color: #333;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+    font-weight: bold;
+
+}
+#pocetna{
+    width: 80%;
+    padding: 10px;
+   
+    align-items: left;
+    text-align: left;
+    display: flex;
+    justify-content:left;    
+}
+
+input{
+    width:100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+}
+
+.container{
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.inputPolje{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#rezultat{
+    width: 50%;
+    padding: 20px;
+    font-size: 15px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 20px;
+        height: auto;
+    }
+
+    #pocetna {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 22px;
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    .inputPolje {
+        width: 100%;
+    }
+
+    input {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    .container {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 16px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #rezultat {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    a {
+        font-size: 16px;
+        padding: 8px;
+    }
+}

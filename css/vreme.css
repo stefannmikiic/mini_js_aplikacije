@@ -82,3 +82,49 @@ a{
     display: flex;
     justify-content:left;    
 }
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 20px;
+        height: auto;
+    }
+
+    #pocetna {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    a {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .weather-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    input[type="text"] {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    button {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    .rezultat {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px;
+        margin-top: 15px;
+    }
+}
